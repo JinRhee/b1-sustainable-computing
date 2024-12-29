@@ -23,6 +23,8 @@ parser.add_argument('--process_pid', type=int, default=0,
                     help='Process PID to monitor')
 parser.add_argument('--process-gpid', type=int, default=0,
                     help='Process PID to monitor')
+parser.add_argument('--wait', type=int, default=0,
+                    help='Wait for stdin input (default=0)')
 
 args = parser.parse_args()
 
@@ -33,17 +35,18 @@ def main():
     f.write("[1/3] Waiting for process PID\n")
     f.write("Waiting for input from stdin...\n")
     f.flush()
-    #'''
-    while True:
-        if select.select([sys.stdin], [], [], 0.1)[0]:
-            line = sys.stdin.readline().strip()
-            if line:
-                args.process_pid = int(line)#+1
-                break
-        else:
-            print("No input yet, still waiting...")
-            time.sleep(.1)
-    #'''
+
+    if args.wait:
+        while True:
+            if select.select([sys.stdin], [], [], 0.1)[0]:
+                line = sys.stdin.readline().strip()
+                if line:
+                    args.process_pid = int(line)#+1
+                    break
+            else:
+                print("No input yet, still waiting...")
+                time.sleep(.1)
+                
     #args.process_pid = 389
     f.write(f"\n Searching process: {args.process_pid}")
     f.write("\n[2/3] Starting powermetrics process\n")
