@@ -40,4 +40,3 @@ with open('log/error.txt', 'w') as error_file:
     
     process_a.wait()
     process_b.kill()
-    #process_b.wait()

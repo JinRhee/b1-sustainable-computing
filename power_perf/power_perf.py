@@ -11,17 +11,7 @@ parser = argparse.ArgumentParser(
     description='asitop: Performance monitoring CLI tool for Apple Silicon')
 parser.add_argument('--interval', type=float, default=100,
                     help='Display interval and sampling interval for powermetrics (ms)')
-parser.add_argument('--color', type=int, default=2,
-                    help='Choose display color (0~8)')
-parser.add_argument('--avg', type=int, default=30000,
-                    help='Interval for averaged values (ms)')
-parser.add_argument('--show_cores', type=bool, default=False,
-                    help='Choose show cores mode')
-parser.add_argument('--max_count', type=int, default=0,
-                    help='Max show count to restart powermetrics')
 parser.add_argument('--process_pid', type=int, default=0,
-                    help='Process PID to monitor')
-parser.add_argument('--process-gpid', type=int, default=0,
                     help='Process PID to monitor')
 parser.add_argument('--wait', type=int, default=0,
                     help='Wait for stdin input (default=0)')
@@ -29,9 +19,7 @@ parser.add_argument('--wait', type=int, default=0,
 args = parser.parse_args()
 
 def main():
-    #print(os.getpid())
-    f = open('log/log.txt', 'w')
-    flog = open('log/flog.txt', 'w')
+    f = open(f'log/log{args.process_pid}.txt', 'w')
     f.write("[1/3] Waiting for process PID\n")
     f.write("Waiting for input from stdin...\n")
     f.flush()
@@ -47,13 +35,9 @@ def main():
                 print("No input yet, still waiting...")
                 time.sleep(.1)
                 
-    #args.process_pid = 389
     f.write(f"\n Searching process: {args.process_pid}")
     f.write("\n[2/3] Starting powermetrics process\n")
     timecode = str(int(time.time()))
-
-    #powermetrics_process = run_powermetrics_process(timecode,
-    #                                                interval=args.interval)
 
     powermetrics_process = run_powermetrics_process_manual(timecode,
                                                     interval=args.interval)
@@ -151,7 +135,6 @@ def main():
 
     except KeyboardInterrupt:
         f.close()
-        flog.close()
         print("Stopping...")
         print("\033[?25h")
     
