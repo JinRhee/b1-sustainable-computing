@@ -1,5 +1,6 @@
 from forecast.tools import *
 import argparse
+import timeit
 
 parser = argparse.ArgumentParser(description='forecasting tool')
 parser.add_argument('--model', type=str, nargs='+', default=['holt-winter'],
@@ -12,6 +13,7 @@ parser.add_argument('--wait', type=int, default=0,
 args = parser.parse_args()
 
 def main():
+    t_start = time.process_time_ns()
     print('starting with...')
     print(args.model, args.timescale, args.wait)
     f = open('log/forecast_log.txt', 'w')
@@ -52,16 +54,12 @@ def main():
     
     models = ('holt-winter', 'sarima')
     
-    for model in args.model:
+    for model in args.model:                                            # Remove if just calling one model
         results = []
         for key in args.timescale:
             (scale, forecast_periods, m) = timescale_dict[key]
-            train_data, test_data = split_data(carbon_data, scale)
+            train_data, test_data = split_data(carbon_data, scale)      # Data spltting happens too many times..?
             forecast_periods = test_data.shape[0]
-
-            #print('data read okay...\n')
-            #print('train data:\n', train_data.head(), '\n')
-            #print('test_data:\n', test_data.head())
 
             f.write('========================\n')
             f.write('data read okay...\n')
@@ -85,24 +83,34 @@ def main():
             t2 = time.process_time_ns()
             plot_forecast(train_data, test_data, forecast, scale, forecast_periods, m, model)
             t3 = time.process_time_ns()
+            mae, mse, rmse = calculate_errors(test_data, forecast)
+            t4 = time.process_time_ns()
 
             # Get process times
             model_time = t1 - t0
             log_time = t2 - t1
             plot_time = t3 - t2
-            
-            process_time = model_time + log_time #+ plot_time
-            
-            mae, mse, rmse = calculate_errors(test_data, forecast)
-            results.append((mae, mse, rmse, process_time))
+            error_time = t4 - t3
+
+            results.append((mae, mse, rmse, model_time, log_time, plot_time, error_time))
             f.flush()
         
         f.write(str(model)+'\n')
         f.flush()
-        for (mae, mse, rmse, process_time) in results:
-            f.write(f'MAE: {mae:7.2f}, MSE: {mse:7.2f}, RMSE: {rmse:7.2f}, time: {process_time*1e-6: 9.2f} ms\n')
+
+        for (mae, mse, rmse, model_time, log_time, plot_time, error_time) in results:
+            f.write(f'MAE: {mae:7.2f}, MSE: {mse:7.2f}, RMSE: {rmse:7.2f}\n')
+            f.write(f'model: {model_time*1e-6: 9.2f} ms\n')
+            f.write(f'log  : {log_time*1e-6: 9.2f} ms\n')
+            f.write(f'plot : {plot_time*1e-6: 9.2f} ms\n')
+            f.write(f'error: {error_time*1e-6: 9.2f} ms\n')
             f.flush()
 
+    t_end = time.process_time_ns()
+    t_total = t_end - t_start
+    return t_total
+
 if __name__ == '__main__':
-    main()
+    total_time = main()
+    print(f'total: {total_time*1e-6: 9.2f} ms')
     
