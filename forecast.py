@@ -53,10 +53,10 @@ def main():
     file_path = os.path.join(os.getcwd(), 'data', file_name)
     df = pd.read_csv(file_path)
     carbon_data = pd.DataFrame(df['CARBON_INTENSITY'].values, index=pd.to_datetime(df['DATETIME']))
-    #carbon_data = carbon_data.truncate(before=pd.Timestamp('2015-01-01 00:00:00').tz_localize('UTC'))
-    
+    carbon_data = carbon_data.truncate(before=pd.Timestamp('2015-01-01 00:00:00').tz_localize('UTC'))
+
+    results = []
     for model in args.model:                                            # Remove if just calling one model
-        results = []
         for key in args.timescale:
             t0 = time.process_time_ns()
             (scale, forecast_periods, m) = timescale_dict[key]
@@ -81,9 +81,10 @@ def main():
                 forecast = sarima(train_data, scale, forecast_periods, m, params, seasonal_params)
                 
             t2 = time.process_time_ns()
-            log_results(forecast, scale, forecast_periods, m, model)
+            log_results(forecast, scale, forecast_periods, m, model, os.getpid())
+            #log_results_savetext(forecast, scale, forecast_periods, m, model, os.getpid())
             t3 = time.process_time_ns()
-            plot_forecast(train_data, test_data, forecast, scale, forecast_periods, m, model)
+            plot_forecast(train_data, test_data, forecast, scale, forecast_periods, m, model, os.getpid())
             t4 = time.process_time_ns()
             mae, mse, rmse = calculate_errors(test_data, forecast)
             t5 = time.process_time_ns()
@@ -95,26 +96,22 @@ def main():
             plot_time = t4 - t3
             error_time = t5 - t4
 
-            results.append((mae, mse, rmse, setup_time, model_time, log_time, plot_time, error_time))
-            f.flush()
-        
-        f.write(str(model)+'\n')
+            results.append((model, scale, mae, mse, rmse, setup_time, model_time, log_time, plot_time, error_time))
+
+    for (model, scale, mae, mse, rmse, setup_time, model_time, log_time, plot_time, error_time) in results:
+        f.write(f'model_type: {model}  scale: {scale}\n')
+        f.write(f'MAE: {mae:7.2f}, MSE: {mse:7.2f}, RMSE: {rmse:7.2f}')
+        if args.verbose:
+            f.write('\n')
+            f.write(f'setup: {setup_time*1e-6: 11.4f} ms\n')
+            f.write(f'model: {model_time*1e-6: 11.4f} ms\n')
+            f.write(f'log  : {log_time*1e-6: 11.4f} ms\n')
+            f.write(f'plot : {plot_time*1e-6: 11.4f} ms\n')
+            f.write(f'error: {error_time*1e-6: 11.4f} ms\n')
+            f.write(f'total: {(setup_time+model_time+log_time+plot_time+error_time)*1e-6: 11.4f} ms\n')
+        else:
+            f.write(f', time: {(setup_time+model_time+log_time+plot_time+error_time)*1e-6: 11.4f} ms\n')
         f.flush()
-
-        for (mae, mse, rmse, setup_time, model_time, log_time, plot_time, error_time) in results:
-            f.write(f'MAE: {mae:7.2f}, MSE: {mse:7.2f}, RMSE: {rmse:7.2f}')
-            if args.verbose:
-                f.write('\n')
-                f.write(f'setup: {setup_time*1e-6: 11.4f} ms\n')
-                f.write(f'model: {model_time*1e-6: 11.4f} ms\n')
-                f.write(f'log  : {log_time*1e-6: 11.4f} ms\n')
-                f.write(f'plot : {plot_time*1e-6: 11.4f} ms\n')
-                f.write(f'error: {error_time*1e-6: 11.4f} ms\n')
-                f.write(f'total: {(setup_time+model_time+log_time+plot_time+error_time)*1e-6: 11.4f} ms\n')
-            else:
-                f.write(f', time: {(setup_time+model_time+log_time+plot_time+error_time)*1e-6: 11.4f} ms\n')
-
-            f.flush()
 
     t_end = time.process_time_ns()
     t_total = t_end - t_start

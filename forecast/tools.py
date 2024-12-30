@@ -1,4 +1,5 @@
 import os
+import math
 import numpy as np
 import pandas as pd
 import time
@@ -51,18 +52,41 @@ def calculate_errors(observed, forecast_mean):
     rmse = root_mean_squared_error(observed, forecast_mean)
     return mae, mse, rmse
 
-def plot_forecast(train_data, test_data, forecast, scale, forecast_periods, m, method):
-    # Plot the forecast
-    plt.figure(figsize=(20, 7))
-    plt.plot(train_data, 'bo-', label='Observed')
-    plt.plot(forecast, 'rx-', label='Forecast')
-    plt.plot(test_data, 'ko--', label='Actual')
-    #plt.fill_between(forecast.conf_int().index, forecast.conf_int().iloc[:, 0], forecast.conf_int().iloc[:, 1], color='pink')
-    plt.title(f"Carbon Intensity Forecast for 2024 in {scale}")
-    plt.xlabel("Date")
-    plt.ylabel("Carbon Intensity")
-    plt.legend()
-    plt.savefig(f"plots/{scale}_{forecast_periods}_{m}_{method}.png")
+def mean_absolute_error_manual(y_true, y_pred):
+    mae = np.mean(np.abs(y_true-y_pred))
+    return mae
+
+def mean_squared_error_manual(y_true, y_pred):
+    mse = np.mean(np.power((y_true-y_pred), 2))
+    return mse
+
+def calculate_errors_manual(observed, forecast_mean):
+    mae = mean_absolute_error_manual(observed, forecast_mean)
+    mse = mean_squared_error_manual(observed, forecast_mean)
+    rmse = math.sqrt(mse)
+    return mae, mse, rmse
+
+def plot_forecast(train_data, test_data, forecast, scale, forecast_periods, m, method, pid):
+    # Plot the forecast on a subplot with 2 rows and 1 column
+    fig, ax = plt.subplots(2, 1, figsize=(20, 14))
+
+    ax[0].plot(train_data, 'bo-', label='Observed')
+    ax[0].plot(forecast, 'rx-', label='Forecast')
+    ax[0].plot(test_data, 'ko--', label='Actual')
+    ax[0].set_title(f"{method} forecast in {scale} for {forecast_periods} periods")
+    ax[0].set_xlabel("Date")
+    ax[0].set_ylabel("Carbon Intensity")
+    ax[0].legend()
+
+    ax[1].plot(forecast, 'rx-', label='Forecast')
+    ax[1].plot(test_data, 'ko--', label='Actual')
+    ax[1].set_title(f"{method} forecast in {scale} for {forecast_periods} periods (Zoomed In)")
+    ax[1].set_xlabel("Date")
+    ax[1].set_ylabel("Carbon Intensity")
+    ax[1].legend()
+
+    plt.tight_layout()
+    plt.savefig(f"plots/{scale}_{forecast_periods}_{m}_{method}_{pid}.png")
     #plt.show()
 
 
@@ -96,6 +120,9 @@ def sarima(train_data, scale, forecast_periods, m, params, seasonal_params):
 
     return forecast
 
-def log_results(forecast, scale, forecast_periods, m, method):
-    forecast.to_csv(f'results/{scale}_{forecast_periods}_{m}_{method}.csv', header=['FORECAST_INTENSITY'], index_label=['DATETIME'])
+def log_results(forecast, scale, forecast_periods, m, method, pid):
+    forecast.to_csv(f'results/{scale}_{forecast_periods}_{m}_{method}_{pid}.csv', header=['FORECAST_INTENSITY'], index_label=['DATETIME'])
+
+def log_results_savetext(forecast, scale, forecast_periods, m, method, pid):
+    np.savetxt(f'results/{scale}_{forecast_periods}_{m}_{method}_{pid}_np.csv', forecast.reset_index().to_numpy(dtype=str), fmt=['%s', '%s'], delimiter=',', header='DATETIME,FORECAST_INTENSITY')
 
