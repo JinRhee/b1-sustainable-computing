@@ -2,8 +2,8 @@ import subprocess
 import time
 import psutil
 
-def run_a(stderr_file):
-    process_a = subprocess.Popen(['sudo', 'python3', 'forecast.py'], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=stderr_file, shell=False)
+def run_a(stderr_file, arguments):
+    process_a = subprocess.Popen(['sudo', 'python3', 'forecast.py'] + list(arguments), stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=stderr_file, shell=False)
     return process_a
 
 # Function to run b.py
@@ -13,9 +13,10 @@ def run_b(stderr_file):
 
 # Open the error log file
 with open('log/error.txt', 'w') as error_file:
+    forecast_args = ['--model', 'sarima', '--timescale', 'year', '--wait', '1', '--verbose', '1']
     # Run a.py and get its PID
     print("Forecast ready...")
-    process_a = run_a(error_file)
+    process_a = run_a(error_file, forecast_args)
 
     # Run b.py
     print("Monitor ready...")
@@ -39,4 +40,5 @@ with open('log/error.txt', 'w') as error_file:
     print('Forecast STARTED')
     
     process_a.wait()
+    time.sleep(0.5)
     process_b.kill()

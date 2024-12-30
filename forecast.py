@@ -1,6 +1,6 @@
 from forecast.tools import *
+import os
 import argparse
-import timeit
 
 parser = argparse.ArgumentParser(description='forecasting tool')
 parser.add_argument('--model', type=str, nargs='+', default=['holt-winter'],
@@ -9,6 +9,8 @@ parser.add_argument('--timescale', type=str, nargs='+', default=['hour'],
                     help='Forecasting timescale to use')
 parser.add_argument('--wait', type=int, default=0,
                     help='Wait for stdin input (default=0)')
+parser.add_argument('--verbose', type=int, default=0,
+                    help='Enable verbose timing (default=0)')
 
 args = parser.parse_args()
 
@@ -16,7 +18,7 @@ def main():
     t_start = time.process_time_ns()
     print('starting with...')
     print(args.model, args.timescale, args.wait)
-    f = open('log/forecast_log.txt', 'w')
+    f = open(f'log/forecast_log{os.getpid()}.txt', 'w')
 
     if args.wait:
         while True:
@@ -52,11 +54,10 @@ def main():
     carbon_data = pd.DataFrame(df['CARBON_INTENSITY'].values, index=pd.to_datetime(df['DATETIME']))
     #carbon_data = carbon_data.truncate(before=pd.Timestamp('2015-01-01 00:00:00').tz_localize('UTC'))
     
-    models = ('holt-winter', 'sarima')
-    
     for model in args.model:                                            # Remove if just calling one model
         results = []
         for key in args.timescale:
+            t0 = time.process_time_ns()
             (scale, forecast_periods, m) = timescale_dict[key]
             train_data, test_data = split_data(carbon_data, scale)      # Data spltting happens too many times..?
             forecast_periods = test_data.shape[0]
@@ -69,7 +70,7 @@ def main():
             f.write('------------------------\n')
             f.flush()
 
-            t0 = time.process_time_ns()
+            t1 = time.process_time_ns()
             if (model == 'holt-winter'):
                 forecast = holt_winter(train_data, scale, forecast_periods, m)
 
@@ -78,32 +79,40 @@ def main():
                 seasonal_params = (0, 1, 0)
                 forecast = sarima(train_data, scale, forecast_periods, m, params, seasonal_params)
                 
-            t1 = time.process_time_ns()
-            log_results(forecast, scale, forecast_periods, m, model)
             t2 = time.process_time_ns()
-            plot_forecast(train_data, test_data, forecast, scale, forecast_periods, m, model)
+            log_results(forecast, scale, forecast_periods, m, model)
             t3 = time.process_time_ns()
-            mae, mse, rmse = calculate_errors(test_data, forecast)
+            plot_forecast(train_data, test_data, forecast, scale, forecast_periods, m, model)
             t4 = time.process_time_ns()
+            mae, mse, rmse = calculate_errors(test_data, forecast)
+            t5 = time.process_time_ns()
 
             # Get process times
-            model_time = t1 - t0
-            log_time = t2 - t1
-            plot_time = t3 - t2
-            error_time = t4 - t3
+            setup_time = t1 - t0
+            model_time = t2 - t1
+            log_time = t3 - t2
+            plot_time = t4 - t3
+            error_time = t5 - t4
 
-            results.append((mae, mse, rmse, model_time, log_time, plot_time, error_time))
+            results.append((mae, mse, rmse, setup_time, model_time, log_time, plot_time, error_time))
             f.flush()
         
         f.write(str(model)+'\n')
         f.flush()
 
-        for (mae, mse, rmse, model_time, log_time, plot_time, error_time) in results:
-            f.write(f'MAE: {mae:7.2f}, MSE: {mse:7.2f}, RMSE: {rmse:7.2f}\n')
-            f.write(f'model: {model_time*1e-6: 9.2f} ms\n')
-            f.write(f'log  : {log_time*1e-6: 9.2f} ms\n')
-            f.write(f'plot : {plot_time*1e-6: 9.2f} ms\n')
-            f.write(f'error: {error_time*1e-6: 9.2f} ms\n')
+        for (mae, mse, rmse, setup_time, model_time, log_time, plot_time, error_time) in results:
+            f.write(f'MAE: {mae:7.2f}, MSE: {mse:7.2f}, RMSE: {rmse:7.2f}')
+            if args.verbose:
+                f.write('\n')
+                f.write(f'setup: {setup_time*1e-6: 11.4f} ms\n')
+                f.write(f'model: {model_time*1e-6: 11.4f} ms\n')
+                f.write(f'log  : {log_time*1e-6: 11.4f} ms\n')
+                f.write(f'plot : {plot_time*1e-6: 11.4f} ms\n')
+                f.write(f'error: {error_time*1e-6: 11.4f} ms\n')
+                f.write(f'total: {(setup_time+model_time+log_time+plot_time+error_time)*1e-6: 11.4f} ms\n')
+            else:
+                f.write(f', time: {(setup_time+model_time+log_time+plot_time+error_time)*1e-6: 11.4f} ms\n')
+
             f.flush()
 
     t_end = time.process_time_ns()

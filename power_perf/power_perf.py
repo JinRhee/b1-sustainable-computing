@@ -13,30 +13,32 @@ parser.add_argument('--interval', type=float, default=100,
                     help='Display interval and sampling interval for powermetrics (ms)')
 parser.add_argument('--process_pid', type=int, default=0,
                     help='Process PID to monitor')
-parser.add_argument('--wait', type=int, default=0,
+parser.add_argument('--wait', type=int, default=1,
                     help='Wait for stdin input (default=0)')
 
 args = parser.parse_args()
 
 def main():
-    f = open(f'log/log{args.process_pid}.txt', 'w')
-    f.write("[1/3] Waiting for process PID\n")
-    f.write("Waiting for input from stdin...\n")
-    f.flush()
-
     if args.wait:
         while True:
             if select.select([sys.stdin], [], [], 0.1)[0]:
                 line = sys.stdin.readline().strip()
                 if line:
-                    args.process_pid = int(line)#+1
+                    process_pid = int(line)#+1
                     break
             else:
                 print("No input yet, still waiting...")
                 time.sleep(.1)
-                
-    f.write(f"\n Searching process: {args.process_pid}")
+    else:
+        process_pid = args.process_pid
+
+    f = open(f'log/log{process_pid}.txt', 'w')
+    f.write("[1/3] Received process PID\n")
+    f.write("Waiting for input from stdin...\n")
+    f.write(f"\n Searching process: {process_pid}")
     f.write("\n[2/3] Starting powermetrics process\n")
+    f.flush()
+
     timecode = str(int(time.time()))
 
     powermetrics_process = run_powermetrics_process_manual(timecode,
@@ -92,12 +94,12 @@ def main():
                     gpu_power_W = cpu_metrics_dict["gpu_W"] / args.interval
 
                     all_process_power = get_power(process_dicts, "-2")
-                    process_power = get_power(process_dicts, args.process_pid)
+                    process_power = get_power(process_dicts, process_pid)
 
                     # If process is not found
                     if (process_power == all_process_power):
-                        print(f"could not find process with PID: {args.process_pid}\n")
-                        f.write(f"could not find process with PID: {args.process_pid}\n")
+                        print(f"could not find process with PID: {process_pid}\n")
+                        f.write(f"could not find process with PID: {process_pid}\n")
                         f.flush()
 
                     else:
@@ -110,7 +112,7 @@ def main():
 
                         print(f"CPU: {cpu_power_W:5.3f}[W] | GPU: {gpu_power_W:5.3f}[W]")
                         print(f"all_process: {all_process_power:9.3f}")
-                        print(f"{args.process_pid:11}: {process_power:9.3f}")
+                        print(f"{process_pid:11}: {process_power:9.3f}")
                         print(f"process_P  : {process_power_estimate:9.3e} [W]")
                         print(f"delta_t    : {delta_t:9.3e} [ms]")
                         print(f"process_E  : {process_energy_estimate:9.3e} [kWh]")
@@ -120,7 +122,7 @@ def main():
                         
                         f.write(f"CPU: {cpu_power_W:5.3f}[W] | GPU: {gpu_power_W:5.3f}[W]\n")
                         f.write(f"all_process: {all_process_power:9.3f}\n")
-                        f.write(f"{args.process_pid:11}: {process_power:9.3f}\n")
+                        f.write(f"{process_pid:11}: {process_power:9.3f}\n")
                         f.write(f"process_P  : {process_power_estimate:9.3e} [W]\n")
                         f.write(f"delta_t    : {delta_t:9.3e} [ms]\n")
                         f.write(f"process_E  : {process_energy_estimate:9.3e} [kWh]\n")
