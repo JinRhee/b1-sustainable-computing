@@ -19,6 +19,7 @@ def main():
     print('starting with...')
     print(args.model, args.timescale, args.wait)
     f = open(f'log/forecast_log{os.getpid()}.txt', 'w')
+    f.write(f'{args.model}, {args.timescale}, {args.wait}')
 
     if args.wait:
         while True:

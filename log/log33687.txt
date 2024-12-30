@@ -1,0 +1,639 @@
+[1/3] Received process PID
+Waiting for input from stdin...
+
+ Searching process: 33687
+[2/3] Starting powermetrics process
+
+[3/3] Waiting for first reading...
+1735550327935013000
+--------------------------
+2024-12-30 09:18:47 | 1351.261 | 1
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.351e+03 [ms]
+process_E  : 7.608e-13 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.477e-11 [gCO2]
+cumulative : 5.477e-11 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 143.258 | 2
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.433e+02 [ms]
+process_E  : 8.065e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.807e-12 [gCO2]
+cumulative : 6.058e-11 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 124.569 | 3
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.246e+02 [ms]
+process_E  : 7.013e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.049e-12 [gCO2]
+cumulative : 6.563e-11 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 128.045 | 4
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.280e+02 [ms]
+process_E  : 7.209e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.190e-12 [gCO2]
+cumulative : 7.082e-11 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 135.095 | 5
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.351e+02 [ms]
+process_E  : 7.606e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.476e-12 [gCO2]
+cumulative : 7.630e-11 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 132.88 | 6
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.329e+02 [ms]
+process_E  : 7.481e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.386e-12 [gCO2]
+cumulative : 8.168e-11 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 136.734 | 7
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.367e+02 [ms]
+process_E  : 7.698e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.543e-12 [gCO2]
+cumulative : 8.723e-11 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 125.227 | 8
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.252e+02 [ms]
+process_E  : 7.050e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.076e-12 [gCO2]
+cumulative : 9.230e-11 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 123.515 | 9
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.235e+02 [ms]
+process_E  : 6.954e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.007e-12 [gCO2]
+cumulative : 9.731e-11 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 127.958 | 10
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.280e+02 [ms]
+process_E  : 7.204e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.187e-12 [gCO2]
+cumulative : 1.025e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 125.798 | 11
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.258e+02 [ms]
+process_E  : 7.082e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.099e-12 [gCO2]
+cumulative : 1.076e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 131.423 | 12
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.314e+02 [ms]
+process_E  : 7.399e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.327e-12 [gCO2]
+cumulative : 1.129e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 133.57 | 13
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.336e+02 [ms]
+process_E  : 7.520e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.414e-12 [gCO2]
+cumulative : 1.183e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 126.32 | 14
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.263e+02 [ms]
+process_E  : 7.112e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.120e-12 [gCO2]
+cumulative : 1.235e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 130.684 | 15
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.307e+02 [ms]
+process_E  : 7.357e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.297e-12 [gCO2]
+cumulative : 1.288e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 130.058 | 16
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.301e+02 [ms]
+process_E  : 7.322e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.272e-12 [gCO2]
+cumulative : 1.340e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 132.011 | 17
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.320e+02 [ms]
+process_E  : 7.432e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.351e-12 [gCO2]
+cumulative : 1.394e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 132.85 | 18
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.328e+02 [ms]
+process_E  : 7.479e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.385e-12 [gCO2]
+cumulative : 1.448e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 130.495 | 19
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.305e+02 [ms]
+process_E  : 7.347e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.290e-12 [gCO2]
+cumulative : 1.501e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 132.227 | 20
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.322e+02 [ms]
+process_E  : 7.444e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.360e-12 [gCO2]
+cumulative : 1.554e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 135.583 | 21
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.356e+02 [ms]
+process_E  : 7.633e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.496e-12 [gCO2]
+cumulative : 1.609e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 137.167 | 22
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.372e+02 [ms]
+process_E  : 7.722e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.560e-12 [gCO2]
+cumulative : 1.665e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 141.323 | 23
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.413e+02 [ms]
+process_E  : 7.956e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.729e-12 [gCO2]
+cumulative : 1.722e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 137.123 | 24
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.371e+02 [ms]
+process_E  : 7.720e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.558e-12 [gCO2]
+cumulative : 1.778e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 135.382 | 25
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.354e+02 [ms]
+process_E  : 7.622e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.488e-12 [gCO2]
+cumulative : 1.832e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 130.61 | 26
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.306e+02 [ms]
+process_E  : 7.353e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.294e-12 [gCO2]
+cumulative : 1.885e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 134.104 | 27
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.341e+02 [ms]
+process_E  : 7.550e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.436e-12 [gCO2]
+cumulative : 1.940e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:47 | 129.841 | 28
+CPU: 0.059[W] | GPU: 0.001[W]
+all_process:  5024.130
+      33687:     0.172
+process_P  : 2.027e-06 [W]
+delta_t    : 1.298e+02 [ms]
+process_E  : 7.310e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 5.263e-12 [gCO2]
+cumulative : 1.992e-10 [gCO2]
+--------------------------
+2024-12-30 09:18:52 | 134.94 | 29
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 153.823 | 30
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 130.009 | 31
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 131.148 | 32
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 130.319 | 33
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 133.326 | 34
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 128.884 | 35
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 128.94 | 36
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 144.918 | 37
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 142.707 | 38
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 144.996 | 39
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 137.912 | 40
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 139.566 | 41
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 128.697 | 42
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 132.277 | 43
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 132.512 | 44
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 136.557 | 45
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 134.893 | 46
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 136.573 | 47
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 138.881 | 48
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 135.586 | 49
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 136.134 | 50
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 131.484 | 51
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 137.016 | 52
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 137.753 | 53
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 141.03 | 54
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 145.472 | 55
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 148.059 | 56
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 137.853 | 57
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 137.36 | 58
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 137.506 | 59
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 140.874 | 60
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 141.413 | 61
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 137.599 | 62
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 140.229 | 63
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 143.145 | 64
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:52 | 139.479 | 65
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 129.85 | 66
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 126.99 | 67
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 123.882 | 68
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 122.975 | 69
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 129.367 | 70
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 128.937 | 71
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 131.522 | 72
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 149.784 | 73
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 140.862 | 74
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 130.034 | 75
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 134.356 | 76
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 137.425 | 77
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 139.11 | 78
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 137.634 | 79
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 137.406 | 80
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 139.798 | 81
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 144.204 | 82
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 140.049 | 83
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 141.104 | 84
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 140.893 | 85
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 140.753 | 86
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 140.858 | 87
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 134.511 | 88
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 137.832 | 89
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 137.972 | 90
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 127.557 | 91
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 132.145 | 92
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 133.59 | 93
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 136.716 | 94
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 137.581 | 95
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 132.875 | 96
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 134.476 | 97
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 136.06 | 98
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 135.723 | 99
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 141.426 | 100
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 140.572 | 101
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:18:57 | 138.235 | 102
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 123.685 | 103
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 127.423 | 104
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 131.535 | 105
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 126.698 | 106
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 128.631 | 107
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 124.529 | 108
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 129.098 | 109
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 128.21 | 110
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 145.138 | 111
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 141.525 | 112
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 140.715 | 113
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 141.105 | 114
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 138.312 | 115
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 141.328 | 116
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 140.681 | 117
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 145.393 | 118
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 131.981 | 119
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 138.337 | 120
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 139.808 | 121
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 140.334 | 122
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 141.197 | 123
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 138.101 | 124
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 133.29 | 125
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 137.528 | 126
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 140.239 | 127
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 137.641 | 128
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 135.068 | 129
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 137.525 | 130
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 132.716 | 131
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 127.275 | 132
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 130.418 | 133
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 133.61 | 134
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 136.856 | 135
+could not find process with PID: 33687
+--------------------------
+2024-12-30 09:19:02 | 141.642 | 136

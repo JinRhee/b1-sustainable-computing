@@ -1,0 +1,392 @@
+[1/3] Received process PID
+Waiting for input from stdin...
+
+ Searching process: 34141
+[2/3] Starting powermetrics process
+
+[3/3] Waiting for first reading...
+1735550383821672000
+--------------------------
+2024-12-30 09:19:43 | 1063.296 | 1
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.063e+03 [ms]
+process_E  : 3.294e-13 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.371e-11 [gCO2]
+cumulative : 2.371e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 133.274 | 2
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.333e+02 [ms]
+process_E  : 4.128e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.972e-12 [gCO2]
+cumulative : 2.669e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 133.838 | 3
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.338e+02 [ms]
+process_E  : 4.146e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.985e-12 [gCO2]
+cumulative : 2.967e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 135.543 | 4
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.355e+02 [ms]
+process_E  : 4.199e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 3.023e-12 [gCO2]
+cumulative : 3.269e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 134.197 | 5
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.342e+02 [ms]
+process_E  : 4.157e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.993e-12 [gCO2]
+cumulative : 3.569e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 127.725 | 6
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.277e+02 [ms]
+process_E  : 3.956e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.849e-12 [gCO2]
+cumulative : 3.854e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 134.471 | 7
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.345e+02 [ms]
+process_E  : 4.165e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.999e-12 [gCO2]
+cumulative : 4.154e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 138.63 | 8
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.386e+02 [ms]
+process_E  : 4.294e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 3.092e-12 [gCO2]
+cumulative : 4.463e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 137.99 | 9
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.380e+02 [ms]
+process_E  : 4.274e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 3.078e-12 [gCO2]
+cumulative : 4.770e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 132.187 | 10
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.322e+02 [ms]
+process_E  : 4.095e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.948e-12 [gCO2]
+cumulative : 5.065e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 132.994 | 11
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.330e+02 [ms]
+process_E  : 4.120e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.966e-12 [gCO2]
+cumulative : 5.362e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 130.34 | 12
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.303e+02 [ms]
+process_E  : 4.037e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.907e-12 [gCO2]
+cumulative : 5.653e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 134.343 | 13
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.343e+02 [ms]
+process_E  : 4.161e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.996e-12 [gCO2]
+cumulative : 5.952e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 133.041 | 14
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.330e+02 [ms]
+process_E  : 4.121e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.967e-12 [gCO2]
+cumulative : 6.249e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 137.126 | 15
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.371e+02 [ms]
+process_E  : 4.248e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 3.058e-12 [gCO2]
+cumulative : 6.555e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 129.854 | 16
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.299e+02 [ms]
+process_E  : 4.022e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.896e-12 [gCO2]
+cumulative : 6.844e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 130.2 | 17
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.302e+02 [ms]
+process_E  : 4.033e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.904e-12 [gCO2]
+cumulative : 7.135e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 134.009 | 18
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.340e+02 [ms]
+process_E  : 4.151e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.989e-12 [gCO2]
+cumulative : 7.434e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 135.889 | 19
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.359e+02 [ms]
+process_E  : 4.209e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 3.031e-12 [gCO2]
+cumulative : 7.737e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 127.681 | 20
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.277e+02 [ms]
+process_E  : 3.955e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.848e-12 [gCO2]
+cumulative : 8.021e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 130.139 | 21
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.301e+02 [ms]
+process_E  : 4.031e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.902e-12 [gCO2]
+cumulative : 8.312e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 136.694 | 22
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.367e+02 [ms]
+process_E  : 4.234e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 3.049e-12 [gCO2]
+cumulative : 8.617e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 133.886 | 23
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.339e+02 [ms]
+process_E  : 4.147e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.986e-12 [gCO2]
+cumulative : 8.915e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 137.262 | 24
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.373e+02 [ms]
+process_E  : 4.252e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 3.061e-12 [gCO2]
+cumulative : 9.221e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 127.301 | 25
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.273e+02 [ms]
+process_E  : 3.943e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.839e-12 [gCO2]
+cumulative : 9.505e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 122.903 | 26
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.229e+02 [ms]
+process_E  : 3.807e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.741e-12 [gCO2]
+cumulative : 9.779e-11 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 127.331 | 27
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.273e+02 [ms]
+process_E  : 3.944e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.840e-12 [gCO2]
+cumulative : 1.006e-10 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 126.502 | 28
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.265e+02 [ms]
+process_E  : 3.919e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.821e-12 [gCO2]
+cumulative : 1.035e-10 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 125.955 | 29
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.260e+02 [ms]
+process_E  : 3.902e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.809e-12 [gCO2]
+cumulative : 1.063e-10 [gCO2]
+--------------------------
+2024-12-30 09:19:43 | 128.94 | 30
+CPU: 0.038[W] | GPU: 0.002[W]
+all_process:  3163.280
+      34141:     0.094
+process_P  : 1.115e-06 [W]
+delta_t    : 1.289e+02 [ms]
+process_E  : 3.994e-14 [kWh]
+carbon_int : 7.200e+01 [gCO2/kWh]
+process_int: 2.876e-12 [gCO2]
+cumulative : 1.091e-10 [gCO2]
+--------------------------
+2024-12-30 09:19:48 | 125.265 | 31
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 124.938 | 32
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 131.223 | 33
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 130.703 | 34
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 130.779 | 35
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 135.832 | 36
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 138.055 | 37
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 142.5 | 38
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 134.671 | 39
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 138.99 | 40
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 133.817 | 41
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 133.447 | 42
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 136.943 | 43
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 126.941 | 44
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 126.783 | 45
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 129.882 | 46
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 126.911 | 47
+could not find process with PID: 34141
+--------------------------
+2024-12-30 09:19:48 | 126.762 | 48
+could not find process with PID: 34141

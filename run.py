@@ -13,7 +13,8 @@ def run_b(stderr_file):
 
 # Open the error log file
 with open('log/error.txt', 'w') as error_file:
-    forecast_args = ['--model', 'sarima', '--timescale', 'year', '--wait', '1', '--verbose', '1']
+    forecast_args = ['--model', 'holt-winter', '--timescale', 'hour', '--wait', '1', '--verbose', '1']
+    print(forecast_args)
     # Run a.py and get its PID
     print("Forecast ready...")
     process_a = run_a(error_file, forecast_args)
